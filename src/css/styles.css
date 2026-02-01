@@ -16,3 +16,130 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+/* #endregion */
+
+
+/* #region Task-1 */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-item {
+    width: 360px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.modal {
+    background: rgba(46, 47, 66, 0.8);
+}
+
+.modal-image {
+    width: 1112px;
+    height: 640px;
+}
+
+/* #endregion */
+
+/* #region Task-2 */
+
+.feedback-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    border-radius: 8px;
+    padding: 24px;
+    width: 408px;
+    background: #fff;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+.feedback-form label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-bottom: 8px;
+}
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: inherit;
+    margin-top: 4px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover{
+    border: 1px solid #000;
+}
+.feedback-form input:active,
+.feedback-form textarea:active {
+    border: 1px solid #808080;
+}
+
+
+.feedback-form input {
+    max-height: 24px;
+    max-width: 336px;
+    min-height: 24px;
+    min-width: 336px;
+    resize: none;
+}
+.feedback-form textarea {
+    max-height: 64px;
+    max-width: 336px;
+    min-height: 64px;
+    min-width: 336px;
+    resize: none;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 16px;
+    width: 95px;
+    height: 40px;
+    background: #4e75ff;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+
+}
+
+button:hover {
+    background: #3b5dcc;
+    cursor: pointer;
+}
+/* #endregion */
