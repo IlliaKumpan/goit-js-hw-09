@@ -1,3 +1,5 @@
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 const images = [
   {
     preview:
@@ -82,20 +84,16 @@ const markup = images
 
 
 galleryContainer.insertAdjacentHTML("beforeend", markup);
-galleryContainer.addEventListener("click", checkClick);
 
-function checkClick(event) {
-  event.preventDefault();
-
-  if (event.target.classList.contains("gallery-image")) {
-    const lightbox = new SimpleLightbox(".gallery a", {
+ const lightbox = new SimpleLightbox(".gallery a", {
       captionsData: "alt",
       captionPosition: "bottom",
       captionDelay: 250,
     });
+
+function checkClick(event) {
+  if (event.target.classList.contains("gallery-image")) {
+    lightbox.open(event.target.parentNode);
   }
 }
-// Описаний в документації
-import SimpleLightbox from "simplelightbox";
-// Додатковий імпорт стилів
-import "simplelightbox/dist/simple-lightbox.min.css";
+
